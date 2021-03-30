@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="script.js" async defer></script>
+    <script
+      src="https://kit.fontawesome.com/d481d38beb.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="calcBody">
+      <!-- display section for equations/inputs/answers with history -->
+      <div id="displayRow" class="row justify-content-center">
+        <div id="displayBox" class="col-12 d-flex justify-content-around align-self-end">
+          <input id="displayText4" class="inputDisplayBox" type="text" name="displayBox" readonly/>
+          <input id="displayText3" class="inputDisplayBox" type="text" name="displayBox" readonly/>
+          <input id="displayText2" class="inputDisplayBox" type="text" name="displayBox" readonly/>
+          <input id="displayText" class="inputDisplayBox" type="text" name="displayBox" readonly />
+        </div>
+      </div>
+
+      <div class="row align-items-center justify-content-between">
+        <!-- clear display button -->
+        <div id="clearButton" class="col-2 d-flex align-items-center justify-content-center buttonShadow squareButton" onclick="clearDisplay()">
+          <p class="centerText">AC</p>
+        </div>
+
+        <!-- add previous answer -->
+        <div id="ansButton" class="col-2 otherFunctionButton squareButton buttonShadow" onclick="inputAnswer()">
+          <p class="centerText">Ans</p>
+        </div>
+
+        <!-- to the power of -->
+        <div id="powerButton" class="col-2 otherFunctionButton squareButton buttonShadow" onclick="inputOperator('^')">
+          <p class="centerText">num<sup>x</sup></p>
+        </div>
+
+        <!-- delete last character button -->
+        <div id="deleteButton" class="col-2 d-flex align-items-center justify-content-center buttonShadow squareButton" onclick="delNumber()">
+          <p class="centerText"><i class="fas fa-backspace"></i></p>
+        </div>
+
+      </div>
+
+      <div class="row align-items-center justify-content-between">
+        <!-- number buttons -->
+        <div id="num7" class="col-2 numberButton buttonShadow" onclick="inputNumber(7)">
+          <p class="centerText">7</p>
+        </div>
+        <div id="num8" class="col-2 numberButton buttonShadow" onclick="inputNumber(8)">
+          <p class="centerText">8</p>
+        </div>
+        <div id="num9" class="col-2 numberButton buttonShadow" onclick="inputNumber(9)">
+          <p class="centerText">9</p>
+        </div>
+
+        <!-- divide button -->
+        <div id="divideButton" class="col-2 functionButton squareButton buttonShadow"
+          onclick="inputOperator('/')">
+          <p class="centerText"><i class="fas fa-divide"></i></p>
+        </div>
+      </div>
+
+      <div class="row align-items-center justify-content-between">
+        <!-- number buttons -->
+        <div id="num4" class="col-2 numberButton buttonShadow" onclick="inputNumber(4)">
+          <p class="centerText">4</p>
+        </div>
+        <div id="num5" class="col-2 numberButton buttonShadow" onclick="inputNumber(5)">
+          <p class="centerText">5</p>
+        </div>
+        <div id="num6" class="col-2 numberButton buttonShadow" onclick="inputNumber(6)">
+          <p class="centerText">6</p>
+        </div>
+
+        <!-- multiply buttton -->
+        <div id="multiplyButton" class="col-2 functionButton squareButton buttonShadow"
+          onclick="inputOperator('*')">
+          <p class="centerText"><i class="fas fa-times"></i></p>
+        </div>
+      </div>
+
+      <div class="row align-items-center justify-content-between">
+        <!-- number buttons -->
+        <div id="num1" class="col-2 numberButton buttonShadow" onclick="inputNumber(1)">
+          <p class="centerText">1</p>
+        </div>
+        <div id="num2" class="col-2 numberButton buttonShadow" onclick="inputNumber(2)">
+          <p class="centerText">2</p>
+        </div>
+        <div id="num3" class="col-2 numberButton buttonShadow" onclick="inputNumber(3)">
+          <p class="centerText">3</p>
+        </div>
+
+        <!-- minus button -->
+        <div id="minusButton" class="col-2 functionButton squareButton buttonShadow"
+          onclick="inputOperator('-')">
+          <p class="centerText"><i class="fas fa-minus"></i></p>
+        </div>
+      </div>
+
+      <div class="row align-items-center justify-content-between">
+        <!-- decimal point button -->
+        <div id="decButton" class="col-2 otherFunctionButton squareButton buttonShadow"
+          onclick="inputOther('.')">
+          <p id="decimal">.</p>
+        </div>
+
+        <!-- number buttons -->
+        <div id="num0" class="col-2 numberButton buttonShadow" onclick="inputNumber(0)">
+          <p class="centerText">0</p>
+        </div>
+
+        <!-- addition  button -->
+        <div id="sumButton" class="col-2 functionButton squareButton buttonShadow"
+          onclick="inputOperator('+')">
+          <p class="centerText"><i class="fas fa-plus"></i></p>
+        </div>
+
+        <!-- equals/submit button -->
+        <div
+          id="submitButton"
+          class="col-2 d-flex align-items-center justify-content-center squareButton buttonShadow"
+          onclick="submitEquals()">
+          <p class="centerText"><i class="fas fa-equals"></i></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Included for bootstrap -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+  </body>
+</html>

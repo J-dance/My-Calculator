@@ -1,0 +1,47 @@
+@import '_variables.scss';
+
+//  from bootstrap docs
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+
+
+body {
+  background-image: url("/assets/wood2.webp");
+  background-size: auto 100%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#calcBody {
+  background: rgba($color: $colour-dark2, $alpha: 0.5);
+  border: 3px solid $colour-white;
+  border-radius: 20px;
+  box-shadow: 12px 12px 12px;
+}
+
+#displayRow {
+  height: 30%;
+  margin-bottom: 30px;
+}
+
+#displayBox {
+  background: $colour-dark2;
+  border: 2px solid $colour-white;
+  height: 100%;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.inputDisplayBox {
+  background: none;
+  border: none;
+  text-align: right;
+}
+
+.row{
+  height: 12%;
+}

@@ -1,0 +1,96 @@
+@media screen and (min-width: 1200px) {
+  #calcBody {
+    height: 540px;
+    width: 400px;
+    border-radius: 17px;
+    box-shadow: 12px 12px 12px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #calcBody {
+    height: 540px;
+    width: 400px;
+    border-radius: 17px;
+    box-shadow: 12px 12px 12px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #calcBody {
+    height: 85vh;
+    width: 75vw;
+    border-radius: 30px;
+    box-shadow: 12px 12px 12px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  #displayText2 {
+    font-size: 24px;
+  }
+
+  #displayText3 {
+    font-size: 20px;
+  }
+
+  #displayText4 {
+    font-size: 16px;
+  }
+
+  #displayText {
+    font-size: 28px;
+  }
+
+  #decimal {
+    font-size: 56px;
+  }
+
+  p {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 576px) {
+  #calcBody {
+    height: 80%;
+    width: 80%;
+    border-radius: 30px;
+    box-shadow: 12px 12px 12px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  #displayText2 {
+    font-size: 20px;
+  }
+
+  #displayText3 {
+    font-size: 18px;
+  }
+
+  #displayText4 {
+    font-size: 14px;
+  }
+
+  #displayText {
+    font-size: 22px;
+  }
+
+  #decimal {
+    font-size: 36px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}

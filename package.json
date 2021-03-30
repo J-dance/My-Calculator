@@ -1,0 +1,17 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "Document for Calculator Project",
+  "main": "script.js",
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "e2e": "cypress open"
+  },
+
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^6.5.0"
+  }
+}

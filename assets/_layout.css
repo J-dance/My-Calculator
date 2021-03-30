@@ -1,0 +1,43 @@
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+
+body {
+  background-image: url("/assets/wood2.webp");
+  background-size: auto 100%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#calcBody {
+  background: rgba(42, 43, 46, 0.5);
+  border: 3px solid #F2E3BC;
+  border-radius: 20px;
+  box-shadow: 12px 12px 12px;
+}
+
+#displayRow {
+  height: 30%;
+  margin-bottom: 30px;
+}
+
+#displayBox {
+  background: #2A2B2E;
+  border: 2px solid #F2E3BC;
+  height: 100%;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.inputDisplayBox {
+  background: none;
+  border: none;
+  text-align: right;
+}
+
+.row {
+  height: 12%;
+}

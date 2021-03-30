@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap");
+.inputDisplayBox {
+  color: #F2E3BC;
+}
+
+p {
+  font-family: "Quicksand", sans-serif;
+  color: #F2E3BC;
+}
+
+#displayText2 {
+  font-size: large;
+}
+
+#displayText3 {
+  font-size: medium;
+}
+
+#displayText4 {
+  font-size: small;
+  color: rgba(242, 227, 188, 0.6);
+}
+
+#displayText {
+  font-size: x-large;
+}
+
+#decimal {
+  font-size: 32px;
+}

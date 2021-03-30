@@ -1,0 +1,36 @@
+@import '_variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap');
+
+// font styles
+$font-main: 'Quicksand', sans-serif;
+
+.inputDisplayBox {
+  color: $colour-white;
+}
+
+p {
+  font-family: $font-main;
+  color: $colour-white;
+  // font-size: ;
+}
+
+#displayText2 {
+  font-size: large;
+}
+
+#displayText3 {
+  font-size: medium;
+}
+
+#displayText4 {
+  font-size: small;
+  color: rgba($color: $colour-white, $alpha: 0.6);
+}
+
+#displayText {
+  font-size: x-large;
+}
+
+#decimal {
+  font-size: 32px;
+}
