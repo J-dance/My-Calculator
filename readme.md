@@ -2,7 +2,7 @@ README Document for Calculator Project:
 
 About Project: My first project using HTML, SCSS and Javascript all together. Performs basic math operators on numbers and displays the equations and answers. First time use of Bootstrap used for the layout of the calculator body. 
 
-Build: Built on VSCode, using HTMl, SCSS and Javascript files. Bootstrap framework and npm-cypress used.
+Build: Built on VSCode, using HTMl, SCSS and Javascript files. Bootstrap library and npm-cypress used.
   - npm: in terminal, under folder directory the following is performed: 
     1. 'npm init'
     2. 'npm install cypress --save-dev'
